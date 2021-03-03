@@ -28,3 +28,6 @@ services:
       DOMAIN: 'domain1.org'
       EXTRADOMAIN: 'domain2.org'
       EMAIL: 'name@email.com'
+
+server.crt server.key and server.pem are generated on the volume
+if EXTRADOMAIN is specified extradomain.key extradomain.crt and extradomain.pem are also generated on the volume
