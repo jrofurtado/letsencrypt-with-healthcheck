@@ -20,9 +20,13 @@ services:
   myservice:
     ...
   le:
+    ports:
+      - "80:80"
+      - "443:443"
     image: jrofurtado/letsencrypt-with-healthcheck:1.1.0
     volumes: 
       - lb_data:/volume
     environment:
-      CRONTAB_PERIOD: '1 1 * * 1'
-      PARAMS: '-d domain1.org -d domain2.org'
+      PARAMS: '
+        -d reboot
+
