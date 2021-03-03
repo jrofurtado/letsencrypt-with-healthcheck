@@ -25,4 +25,6 @@ services:
       - lb_data:/volume
     environment:
       CRONTAB_PERIOD: '1 1 * * 1'
-      PARAMS: '-m name@email.com -d domain1.org -d domain2.org'
+      DOMAIN: 'domain1.org'
+      EXTRADOMAIN: 'domain2.org'
+      EMAIL: 'name@email.com'
